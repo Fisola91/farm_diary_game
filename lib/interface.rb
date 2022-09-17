@@ -3,12 +3,19 @@ require_relative "corn"
 require_relative "cow"
 require_relative "chicken"
 
-def start_game
+# class FarmingDiaryGame
+#   def intialize(input: $stdin, output: $stdout)
+#     @input = input
+#     @output = output
+#   end
 
+
+def start_game
   action = " "
   until action == "quit"
     puts "\nPick an action: [corn|rice|quit]"
     print "> "
+
     action = gets.chomp!
     case action
     when "corn"
@@ -22,5 +29,5 @@ def start_game
     end
   end
 end
-
 start_game
+# end
