@@ -3,13 +3,6 @@ require_relative "corn"
 require_relative "cow"
 require_relative "chicken"
 
-# class FarmingDiaryGame
-#   def intialize(input: $stdin, output: $stdout)
-#     @input = input
-#     @output = output
-#   end
-
-
 def start_game
   action = " "
   crops = []
@@ -40,5 +33,3 @@ def start_game
     end
   end
 end
-start_game
-# end
