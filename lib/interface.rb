@@ -14,7 +14,7 @@ def start_game
   action = " "
   crops = []
   until action == "quit"
-    puts "\nPick an action: [corn|rice|quit]"
+    puts "\nPick an action: [corn | rice | water | quit]"
     print "> "
 
     action = gets.chomp!
@@ -22,7 +22,10 @@ def start_game
     when "corn"
       crops << Corn.new
     when "rice"
-      crops << Corn.new
+      crops << Rice.new
+    when "water"
+      crops.each { |crop| crop.water!}
+
     when "quit"
       puts "See you next time"
     else
