@@ -13,8 +13,9 @@ require_relative "chicken"
 def start_game
   action = " "
   crops = []
+  animals = []
   until action == "quit"
-    puts "\nPick an action: [corn | rice | water | quit]"
+    puts "\nPick an action: [corn | rice | water | cow | chicken | feed| quit]"
     print "> "
 
     action = gets.chomp!
@@ -25,7 +26,13 @@ def start_game
       crops << Rice.new
     when "water"
       crops.each { |crop| crop.water!}
-
+    when "cow"
+      animals << Cow.new
+    when "chicken"
+      gender = ["male", "female"].sample
+      animals << Chicken.new(gender)
+    when "feed"
+      animals.each { |animal| animal.feed!}
     when "quit"
       puts "See you next time"
     else
