@@ -12,6 +12,7 @@ require_relative "chicken"
 
 def start_game
   action = " "
+  crops = []
   until action == "quit"
     puts "\nPick an action: [corn|rice|quit]"
     print "> "
@@ -19,9 +20,9 @@ def start_game
     action = gets.chomp!
     case action
     when "corn"
-      puts "Let's plant corn crops!"
+      crops << Corn.new
     when "rice"
-      puts "Let's plant rice crops"
+      crops << Corn.new
     when "quit"
       puts "See you next time"
     else
